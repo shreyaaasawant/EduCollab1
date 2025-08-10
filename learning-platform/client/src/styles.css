@@ -1,0 +1,17 @@
+body {
+  background: linear-gradient(120deg, #e3f2fd 0%, #fbe9e7 100%);
+  min-height: 100vh;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+.fade-in {
+  animation: fadeIn 1.2s cubic-bezier(.39,.575,.565,1.000) both;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: none;}
+}
+.card-hover:hover {
+  transform: scale(1.05) rotate(-1deg);
+  transition: all 0.3s cubic-bezier(.39,.575,.565,1.000);
+  box-shadow: 0 6px 32px rgba(25, 118, 210, 0.13);
+}
