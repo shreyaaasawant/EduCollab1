@@ -39,7 +39,7 @@ export default function Home() {
               <Button
                 size="small"
                 color="primary"
-                onClick={() => navigate("/courses")}
+                onClick={() => navigate("/browse-courses")}
               >
                 Browse Courses
               </Button>
@@ -81,7 +81,7 @@ export default function Home() {
               <Button
                 size="small"
                 sx={{ color: "#fbc02d" }}
-                onClick={() => navigate("/challenges")}
+                onClick={() => navigate("/see-challenges")}
               >
                 See Challenges
               </Button>

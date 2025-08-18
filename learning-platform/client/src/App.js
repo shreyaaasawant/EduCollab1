@@ -2,13 +2,6 @@
  * Main App component for EduCollab platform.
  */
 import React from "react";
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import CoursesPage from ".pages/CoursesPage";
-import CourseDetail from "./CourseDetail";
-import ChallengesPage from "./ChallengesPage";
-import "./App.css";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -19,6 +12,9 @@ import Courses from "./pages/Courses";
 import Challenges from "./pages/Challenges";
 import EditProfile from "./pages/EditProfile";
 import NotFound from "./pages/NotFound";
+import BrowseCourses from "./pages/BrowseCourses"; // new page
+import SeeChallenges from "./pages/SeeChallenges"; // new page
+import CourseDetails from "./pages/CourseDetails";
 
 function App() {
   return (
@@ -31,6 +27,9 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/challenges" element={<Challenges />} />
+        <Route path="/browse-courses" element={<BrowseCourses />} /> {/* new */}
+         <Route path="/courses/:courseId" element={<CourseDetails />} />
+        <Route path="/see-challenges" element={<SeeChallenges />} /> {/* new */}
         <Route path="/edit-profile" element={<EditProfile />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
